@@ -2,6 +2,7 @@ import './App.css'
 import { TonConnectButton } from '@tonconnect/ui-react'
 import { useTonnerreExample } from "./hooks/useTonnerreExample";
 import { useTonConnect } from './hooks/useTonConnect';
+import WebApp from '@twa-dev/sdk';
 
 function App() {
   const {
@@ -20,6 +21,7 @@ function App() {
       </div>
       <div>
         <div className='Card'>
+          <b>Platform: {WebApp.platform}</b><br />
           <b>Our contract Address</b>
           <div className='Hint'>{contractAddress?.slice(0, 30) + "..."}</div>
           <b>Our contract Balance</b>
